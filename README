@@ -50,3 +50,15 @@
     Program działa w oparciu o bazę sqlite3, która jest trzymana w pliku database.db
 
     Opcjonalnie można używać innego pliku poprzez zadeklarowanie zmiennej środowiskowej CRUD_DB
+
+8. Skrypt php ktory tworzy nowego uzytkownika
+   
+   php adduser.php  fred szczur
+
+   tworzy użytkownika o loginie fred i nadaje mu haslo szczur
+
+9. Skrypt do usuwania użytkownikow
+   
+   php deleteuser.php fred
+
+   usuwa użytkownika o loginie fred 
