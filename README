@@ -1,0 +1,52 @@
+1. Aby stworzyć rekord:
+
+    php create.php
+
+    Zwraca ID nowego rekordu, np. 10
+
+2. Aby odczytać rekord
+
+    php read.php 10
+
+    Zwraca nazwy kolumn i ich wartości dla danego rekordu
+
+3. Aby usunąć rekord
+
+    php delete.php 10
+
+    Usuwa rekord o podanym ID
+
+4. Aby zmodyfikować rekord
+
+    php update.php 10 kolumna wartość
+
+    Nadaje kolumnie wartość w wierszu o identyfikatorze 10
+
+5. Aby przeszukiwać rekordy
+
+    php search.php [klucz] [wartosc] [!][sortuj_klucz]
+
+    ! - jeśli ma być sortowanie malejące
+
+    Przykłady:
+
+    php search.php kolumna wartosc
+
+    Zwraca listę rekordów, które mają wartość w podanej kolumnie
+
+    Sortowanie:
+
+    php search.php kolumna wartosc !cena
+
+    Zwraca listę posortowaną malejąco po kolumnie cena rekordów, które mają wartość w podanej kolumnie
+
+6. Logowanie
+
+    Możliwość #1: Skrypty create/read/delete/update.php pytają się o login i hasło przy każdym uruchomieniu
+    Możliwość #2: Dane do logowania zapisane w zmiennej środowiskowej CRUD_LOGIN, CRUD_PASS
+
+7. Baza danych
+
+    Program działa w oparciu o bazę sqlite3, która jest trzymana w pliku database.db
+
+    Opcjonalnie można używać innego pliku poprzez zadeklarowanie zmiennej środowiskowej CRUD_DB
